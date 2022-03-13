@@ -6,9 +6,17 @@
     background-color: #1f2937;
 }
 
+section {
+    display: flex;
+    flex-flow: row wrap;
+}
+
 .hero{
-    height: 250px;
+    height: 300px;
     width: 500px;
+    display: flex;
+    flex: 1 1 auto;
+    border: 4px solid red;
 }
 
 .hero-main {
@@ -17,20 +25,34 @@
     font-weight: bold;
 }
 
+.hero-nav {
+    border: 4px solid red;
+    height: 100px;
+    width: 500px;
+    flex-direction: column;
+    gap: 1px;
+}
+
 .hero-secondary, .hero-header, .footer-text {
     color: #E5E7EB;
     font-size: 18px;
+    display: flex;
+    border: 4px solid red;
 }
 
 .hero-logo {
     color: #F9FAF8;
     font-size: 24px;
+    border: 4px solid red;
 }
 
 .info {
     background-color: white;
     height: 150px;
     width: 500px;
+    display: flex;
+    flex: 1 1 auto;
+    border: 4px solid red;
 }
 
 .info h1{
@@ -49,6 +71,9 @@
     background-color: #E5E7EB;
     height: 200px;
     width: 500px;
+    display: flex;
+    flex: 1 1 auto;
+    border: 4px solid red;
 }
 
 .quote p{
@@ -61,9 +86,15 @@
     background-color: #3882F6;
     height: 300px;
     width: 500px;
+    display: flex;
+    flex: 1 1 auto;
+    border: 4px solid red;
 }
 
 .footer {
-    height: 300px;
+    height: 50px;
     width: 500px;
+    display: flex;
+    flex: 1 1 auto;
+    border: 4px solid red;
 }
