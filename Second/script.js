@@ -8,37 +8,48 @@
 const choices = ["rock", "paper", "scissors"];
 
 // 1) get user input
-let form_submit = document.getElementById("submit")
+let form_submit = document.getElementById("submit");
+let user_input =  document.getElementById("user_choice").value;
 
+
+// test if input is valid
+function validateInput(input){
+    while (true){
+        if (choices.includes(input.toLowerCase())){
+            return true
+        }
+        else{
+            return false
+        }
+    }
+}
+
+// 2) display computer input
+
+function computer_selection(){
+    let random_choice = Math.floor(Math.random() * choices.length);
+    let computer_choice = choices[random_choice];
+
+    console.log(computer_choice);
+
+    document.getElementById("cc_output").innerHTML = "Computer picked: " + computer_choice
+}
+
+// 3) calculate if player or computer won
+
+// 4) main function
 form_submit.addEventListener("click", function(event) {
     event.preventDefault();
     user_input = document.getElementById("user_choice").value;
     console.log(user_input);
 
-    if (choices.includes(user_input.toLowerCase())){
+    if (validateInput(user_input)){
         document.getElementById("user_output").innerText = "You picked: " + user_input;
+        return user_input
     }
     else {
         alert("Invalid input")
     }
-    return true
-
 } )
 
-// 2) display computer input
 
-let random_choice = Math.floor(Math.random() * choices.length);
-computer_choice = choices[random_choice];
-
-console.log(computer_choice);
-
-document.getElementById("cc_output").innerHTML = "Computer picked: " + computer_choice
-
-// 3) player selects
-
-
-// 3) computer selects
-
-
-
-// // 4) calculate if player or computer won
