@@ -1,6 +1,6 @@
 #container {
     /* you have to give height/width if your using grid */
-    height: 300px;
-    width: 500px;
+    height: 500px;
+    width: 960px;
     display: grid;
 }
